@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0139d539-0018-4d59-ae6e-0757d9acbe7e}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>scripts\OSM_LoaderPro.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>{2fb60ff7-5c83-469f-8639-117aae504d79}</InterpreterId>
+    <InterpreterVersion>3.5</InterpreterVersion>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <CommandLineArguments>D:\OSM\Iraq\iraq-latest.osm.bz2 D:\OSM\Iraq Iraq.gdb 4 D:\OSM\Iraq</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="LICENSE-2.0.txt" />
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="scripts\OSM_LoaderPro.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="scripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{2fb60ff7-5c83-469f-8639-117aae504d79}\3.5" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
